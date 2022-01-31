@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  app:                    #The name of the service, can be anything
+    image: todo-backend   #Declares which image to use
+    build: .              #Declare where to build if image is not found
+    ports:                #Declares the porst to publish
+      - 3000:3000

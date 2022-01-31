@@ -1,0 +1,72 @@
+Script started on 2022-01-18 00:38:48-05:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="173" LINES="25"]
+[1m[7m#[27m[1m[0m                                                                                                                                                                             ]2;root@santiago-HP-Pavilion-Gaming-Laptop-15-ec1xxx:/home/santiago/Desktop/SoftwareDEV/FullstackHelsinky/part12-containers-applications/part12-containers-applications/todo-app/todo-backend]1;../todo-backend[0m[27m[24m[J[01;32m➜  [36mtodo-backend[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hscript ../../script-answers/exercise12_8.txt[44Dls                                          [42Dscript script-answers/exercise12_8.txt[38Ddocker-compose -f docker-compose.dev.yml downup down    -d[?1l>[?2004l
+]2;docker-compose -f docker-compose.dev.yml up -d]1;docker-composeCreating network "todo-backend_default" with the default driver
+Creating todo-backend_mongo_1 ... 
+[1A[2KCreating todo-backend_mongo_1 ... [32mdone[0m[1B[1m[7m#[27m[1m[0m                                                                                                                                                                             ]2;root@santiago-HP-Pavilion-Gaming-Laptop-15-ec1xxx:/home/santiago/Desktop/SoftwareDEV/FullstackHelsinky/part12-containers-applications/part12-containers-applications/todo-app/todo-backend]1;../todo-backend[0m[27m[24m[J[01;32m➜  [36mtodo-backend[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hddocker container la -  s - [?1l>[?2004l
+]2;docker container ls]1;dockerCONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+8fb5de0f06e1   mongo     "docker-entrypoint.s…"   9 seconds ago    Up 8 seconds    0.0.0.0:3456->27017/tcp, :::3456->27017/tcp   todo-backend_mongo_1
+3b32ebc6f928   nginx     "/docker-entrypoint.…"   43 minutes ago   Up 43 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp         quizzical_curran
+[1m[7m#[27m[1m[0m                                                                                                                                                                             ]2;root@santiago-HP-Pavilion-Gaming-Laptop-15-ec1xxx:/home/santiago/Desktop/SoftwareDEV/FullstackHelsinky/part12-containers-applications/part12-containers-applications/todo-app/todo-backend]1;../todo-backend[0m[27m[24m[J[01;32m➜  [36mtodo-backend[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hffocker     f  ddocker exec -i [7mtodo-backend_mongo_1[27m[20D[27mt[27mo[27md[27mo[27m-[27mb[27ma[27mc[27mk[27me[27mn[27md[27m_[27mm[27mo[27mn[27mg[27mo[27m_[27m1[8Dt todo-backend_mongo_1[21D[1C[5C[8C[6C[1C bash[?1l>[?2004l
+]2;docker exec -it todo-backend_mongo_1 bash]1;docker]0;root@8fb5de0f06e1: /root@8fb5de0f06e1:/# ls
+[0m[01;36mbin[0m  [01;34mboot[0m  [01;34mdata[0m  [01;34mdev[0m  [01;34mdocker-entrypoint-initdb.d[0m  [01;34metc[0m  [01;34mhome[0m  js-yaml.js  [01;36mlib[0m  [01;36mlib32[0m  [01;36mlib64[0m  [01;36mlibx32[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mopt[0m  [01;34mproc[0m  [01;34mroot[0m  [01;34mrun[0m  [01;36msbin[0m  [01;34msrv[0m  [01;34msys[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+]0;root@8fb5de0f06e1: /root@8fb5de0f06e1:/# mongo -u root -p example
+MongoDB shell version v5.0.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("ef7dbafd-a86e-4379-ab00-05b43956bbbe") }
+MongoDB server version: 5.0.5
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+	https://community.mongodb.com
+---
+The server generated these startup warnings when booting: 
+        2022-01-18T05:38:58.933+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_database[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> db.todos.find()[3G[Jdb.todos.find[1;34m([0m)[17G[3G[Jdb.todos.find(})[18G[3G[Jdb.todos.find(}[1;34m{[0m)[19G[3G[Jdb.todos.find(})[18G[3G[Jdb.todos.find[1;34m([0m)[17G[3G[Jdb.todos.find([1;34m{[0m)[18G[3G[Jdb.todos.find[1;34m([0m{})[19G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("61e65057cf9747d3812ecc98"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("61e65057cf9747d3812ecc99"), "text" : "Learn about containers", "done" : false }
+> db.todos.insertI[3G[Jdb.todos.insert[18GONe[3G[Jdb.todos.insertON[20G[3G[Jdb.todos.insertO[19Gne()[3G[Jdb.todos.insertOne[1;34m([0m)[22G[3G[Jdb.todos.insertOne([1;34m{[0m)[23G[3G[Jdb.todos.insertOne[1;34m([0m{})[24G[3G[Jdb.todos.insertOne([1;34m{[0m})[23G[3G[Jdb.todos.insertOne([1;34m{[0m })[24G[3G[Jdb.todos.insertOne({ })[23G[3G[Jdb.todos.insertOne({  })[24G[3G[Jdb.todos.insertOne({ " })[25G[3G[Jdb.todos.insertOne({ "" })[26G[3G[Jdb.todos.insertOne({ "" })[25G[3G[Jdb.todos.insertOne({ "t" })[26G[3G[Jdb.todos.insertOne({ "te" })[27G[3G[Jdb.todos.insertOne({ "tex" })[28G[3G[Jdb.todos.insertOne({ "text" })[29G[3G[Jdb.todos.insertOne({ "text" })[30G[3G[Jdb.todos.insertOne({ "text": })[31G[3G[Jdb.todos.insertOne({ "text":  })[32G[3G[Jdb.todos.insertOne({ "text": " })[33G[3G[Jdb.todos.insertOne({ "text": "" })[34G[3G[Jdb.todos.insertOne({ "text": "" })[33G[3G[Jdb.todos.insertOne({ "text": "I" })[34G[3G[Jdb.todos.insertOne({ "text": "In" })[35G[3G[Jdb.todos.insertOne({ "text": "Inc" })[36G[3G[Jdb.todos.insertOne({ "text": "Incr" })[37G[3G[Jdb.todos.insertOne({ "text": "Incre" })[38G[3G[Jdb.todos.insertOne({ "text": "Increa" })[39G[3G[Jdb.todos.insertOne({ "text": "Increas" })[40G[3G[Jdb.todos.insertOne({ "text": "Increase" })[41G[3G[Jdb.todos.insertOne({ "text": "Increase " })[42G[3G[Jdb.todos.insertOne({ "text": "Increase t" })[43G[3G[Jdb.todos.insertOne({ "text": "Increase th" })[44G[3G[Jdb.todos.insertOne({ "text": "Increase the" })[45G[3G[Jdb.todos.insertOne({ "text": "Increase the " })[46G[3G[Jdb.todos.insertOne({ "text": "Increase the n" })[47G[3G[Jdb.todos.insertOne({ "text": "Increase the nu" })[48G[3G[Jdb.todos.insertOne({ "text": "Increase the num" })[49G[3G[Jdb.todos.insertOne({ "text": "Increase the numb" })[50G[3G[Jdb.todos.insertOne({ "text": "Increase the numbe" })[51G[3G[Jdb.todos.insertOne({ "text": "Increase the number" })[52G[3G[Jdb.todos.insertOne({ "text": "Increase the number " })[53G[3G[Jdb.todos.insertOne({ "text": "Increase the number o" })[54G[3G[Jdb.todos.insertOne({ "text": "Increase the number of" })[55G[3G[Jdb.todos.insertOne({ "text": "Increase the number of " })[56G[3G[Jdb.todos.insertOne({ "text": "Increase the number of t" })[57G[3G[Jdb.todos.insertOne({ "text": "Increase the number of to" })[58G[3G[Jdb.todos.insertOne({ "text": "Increase the number of too" })[59G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tool" })[60G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools" })[61G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools " })[62G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools i" })[63G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in" })[64G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in " })[65G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in m" })[66G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my" })[67G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my " })[68G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my t" })[69G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my to" })[70G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my too" })[71G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my tool" })[72G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolb" })[73G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbe" })[74G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbel" })[75G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt" })[76G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt" })[77G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", })[78G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt",  })[79G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", " })[80G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "" })[81G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "" })[80G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "d" })[81G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "do" })[82G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "don" })[83G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "done" })[84G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "done" })[85G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "done": })[86G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "done":  })[87G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "done": f })[88G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "done": fa })[89G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "done": fal })[90G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "done": fals })[91G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "done": false })[92G[3G[Jdb.todos.insertOne({ "text": "Increase the number of tools in my toolbelt", "done": false })[95G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("61e6533bac06fa51be7769ee")
+}
+> todos[3G[Jtodo[7G[3G[Jtod[6G[3G[Jto[5G[3G[Jt[4G[3G[J[3Gdbn[3G[Jdb[5G.todos.find()[3G[Jdb.todos.find[1;34m([0m)[17G[3G[Jdb.todos.find(})[18G[3G[Jdb.todos.find(}[1;34m{[0m)[19G[3G[Jdb.todos.find(})[18G[3G[Jdb.todos.find[1;34m([0m)[17G[3G[Jdb.todos.find([1;34m{[0m)[18G[3G[Jdb.todos.find[1;34m([0m{})[19G[3G[Jdb.todos.find([1;34m{[0m})[18G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("61e65057cf9747d3812ecc98"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("61e65057cf9747d3812ecc99"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("61e6533bac06fa51be7769ee"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+]0;root@8fb5de0f06e1: /root@8fb5de0f06e1:/# exit
+exit
+[1m[7m#[27m[1m[0m                                                                                                                                                                             ]2;root@santiago-HP-Pavilion-Gaming-Laptop-15-ec1xxx:/home/santiago/Desktop/SoftwareDEV/FullstackHelsinky/part12-containers-applications/part12-containers-applications/todo-app/todo-backend]1;../todo-backend[0m[27m[24m[J[01;32m➜  [36mtodo-backend[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2022-01-18 00:43:01-05:00 [COMMAND_EXIT_CODE="0"]

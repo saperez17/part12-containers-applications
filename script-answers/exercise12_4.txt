@@ -1,0 +1,9 @@
+Script started on 2022-01-10 23:52:43-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="23"]
+[1m[7m#[27m[1m[0m                                                                                                                                                                                              ]2;root@santiago-HP-Pavilion-Gaming-Laptop-15-ec1xxx:/home/santiago/.local/share/Trash/files/part12-containers-applications/part12-containers-applications]1;..-applications[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hddocker start -i [7m0617a36388c2[27m[12D[27m0[27m6[27m1[27m7[27ma[27m3[27m6[27m3[27m8[27m8[27mc[27m2[?1l>[?2004l
+]2;docker start -i 0617a36388c2]1;docker]0;root@0617a36388c2: /root@0617a36388c2:/# [K]0;root@0617a36388c2: /root@0617a36388c2:/# nan   node usr/src/app/index.js 
+Hello World
+]0;root@0617a36388c2: /root@0617a36388c2:/# [Kexit
+exit
+e[1m[7m#[27m[1m[0m                                                                                                                                                                                              ]2;root@santiago-HP-Pavilion-Gaming-Laptop-15-ec1xxx:/home/santiago/.local/share/Trash/files/part12-containers-applications/part12-containers-applications]1;..-applications[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2022-01-10 23:53:18-05:00 [COMMAND_EXIT_CODE="0"]
