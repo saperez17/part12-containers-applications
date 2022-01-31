@@ -3,5 +3,5 @@
 ## Instructions
 
 
-### Submission repo for exerciseds 12.20 - 12.22
+### Submission repo for exercises 12.20 - 12.22
 https://github.com/saperez17/Fullstack-Container-BlogApp-Final
